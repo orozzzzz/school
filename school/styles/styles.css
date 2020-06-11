@@ -1,0 +1,895 @@
+@font-face {
+	font-family: "Helvetica";
+	src: url("../attach/fonts/Helvetica1.ttf");
+}
+
+@font-face {
+	font-family: "Faust";
+	src: url("../attach/fonts/Faust.otf");
+}
+
+@font-face {
+	font-family: "CCMeanwhile";
+	src: url("../attach/fonts/CCMeanwhile.ttf");
+}
+
+@font-face {
+	font-family: "PT Root UI";
+	src: url("../attach/fonts/PT Root UI.otf");
+}
+
+html {
+	background: #e4ebe9 url(../attach/html.png) repeat top left;
+	color: #000;
+}
+
+body {
+	width: 75%;
+	margin: auto auto;
+	background-color: #DDDDDD;
+}
+
+.header_block {
+	background: -webkit-linear-gradient(315deg, hsla(275.73, 0%, 80.94%, 1) 0%, hsla(275.73, 0%, 80.94%, 0) 70%), -webkit-linear-gradient(65deg, hsla(244.53, 0%, 100%, 1) 10%, hsla(244.53, 0%, 100%, 0) 80%), -webkit-linear-gradient(135deg, hsla(80.48, 0%, 86.59%, 1) 15%, hsla(80.48, 0%, 86.59%, 0) 80%), -webkit-linear-gradient(205deg, hsla(80.71, 0%, 100%, 1) 100%, hsla(80.71, 0%, 100%, 0) 70%);
+	background: linear-gradient(135deg, hsla(275.73, 0%, 80.94%, 1) 0%, hsla(275.73, 0%, 80.94%, 0) 70%), linear-gradient(25deg, hsla(244.53, 0%, 100%, 1) 10%, hsla(244.53, 0%, 100%, 0) 80%), linear-gradient(315deg, hsla(80.48, 0%, 86.59%, 1) 15%, hsla(80.48, 0%, 86.59%, 0) 80%), linear-gradient(245deg, hsla(80.71, 0%, 100%, 1) 100%, hsla(80.71, 0%, 100%, 0) 70%);
+	border-radius: 5px;
+	height: 40px;
+	margin-bottom: 0px;
+}
+
+.homeicon {
+	padding: 4px;
+	display: block;
+	float: left;
+}
+
+.header_block p {
+	font-family: "Faust";
+	width: 350px;
+	display: block;
+	float: left;
+	padding-top: 0;
+	margin-top: 10px;
+}
+
+.header_block .btn {
+	margin-top: 5px;
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 40px;
+	font-family: 'CCMeanwhile', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+	font-weight: 600;
+	color: #524f4e;
+	background: white;
+}
+
+.header_block .btn:hover {
+	background: #0F2345;
+	color: white;
+}
+
+.userinfo {
+	font-family: 'Faust';
+	float: right;
+	margin-top: 10px;
+	font-size: 0.8em;
+}
+
+.userinfo img {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.userinfo p {
+	width: 300px;
+	height: 10px;
+}
+
+.userdatalist {
+	columns: 2;
+	list-style-type: none;
+}
+
+.userdatalist li {
+	width: 400px;
+	color:
+}
+
+.textinput {
+	margin-right: 20px;
+	width: 200px;
+}
+
+.mainpage img {
+	margin-top: -5px;
+	width: 100%;
+}
+
+#map {
+	width: 100%;
+	height: 500px;
+	margin: auto auto;
+}
+
+.mainpage h2 {
+	font-family: "Faust";
+}
+
+.schoollist ul {
+	columns: 3;
+	list-style-type: none;
+}
+
+.schoollist li {
+	font-family: "PT Root UI";
+	padding-bottom: 5px;
+}
+
+.schoollist a {
+	text-decoration: none;
+	color: #0F2345;
+}
+
+.modal .regmodalDialog, .recmodalDialog, .authmodalDialog, .reqmodalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	display: none;
+	pointer-events: none;
+	font-family: "PT Root UI";
+}
+
+.modal h2 {
+	font-family: "Faust";
+	padding-top: 10px;
+	margin: 0;
+}
+
+.modal .regmodalDialog p, .authmodalDialog p, .reqmodalDialog p, .recmodalDialog p {
+	font-family: "PT Root UI";
+	margin: 0;
+	margin-top: 10px;
+	width: 260px;
+}
+
+.modal .regmodalDialog:target, .authmodalDialog:target, .recmodalDialog:target, .reqmodalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modal .regmodalDialog>div {
+	width: 580px;
+	position: relative;
+	margin: 7% auto;
+	padding: 5px 1px 1px 15px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.modal .authmodalDialog>div, .reqmodalDialog>div {
+	width: 280px;
+	position: relative;
+	margin: 7% auto;
+	padding: 5px 0px 5px 30px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.modal .recmodalDialog>div {
+	width: 280px;
+	min-height: 230px;
+	position: relative;
+	margin: 7% auto;
+	padding: 5px 5px 5px 25px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.modal input[type=text], .modal input[type=email], .modal input[type=password], .modal textarea {
+	z-index: 1;
+	padding-right: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-align: center;
+	font-family: "Helvetica1";
+	font-size: 1em;
+	padding: 4px 0 4px 2px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 5px;
+}
+
+.modal .regmodalDialog input[type=text] {
+	margin: 5px;
+	z-index: 1;
+	padding-right: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+
+.modal input[type=submit] {
+	margin-left: 5px;
+	width: 86px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #ccc;
+	cursor: pointer;
+	padding: 0;
+}
+
+.modal input[type=submit]:hover {
+	background: #0F2345;
+	color: white;
+}
+
+.modal input[type=submit]:active {
+	margin-top: 1px;
+	margin-bottom: -1px;
+	box-shadow: inset 0 2px 2px #ccc;
+	zoom: 1;
+}
+
+.modal .close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+}
+
+.modal .close:hover {
+	background: #0F2345;
+}
+
+.regmodal #message {
+	display: none;
+	color: #000;
+	position: relative;
+}
+
+.regmodal #message h3 {
+	margin: 0;
+	padding-top: 10px;
+	font-family: "PT Root UI";
+}
+
+.regmodal #message p {
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	width: 500px;
+}
+
+.regmodal .valid {
+	color: green;
+}
+
+.regmodal .valid:before {
+	position: relative;
+	content: "✔";
+}
+
+.regmodal .invalid {
+	color: red;
+}
+
+.regmodal .invalid:before {
+	position: relative;
+	content: "✖";
+}
+
+.content {
+	background-color: #DDDDDD;
+	min-height: 550px;
+}
+
+.content h2 {
+	font-family: "Faust";
+	text-align: center;
+}
+
+.school {
+	padding: 20px;
+	font-family: "PT Root UI";
+	min-width: 70%;
+	display: inline-block;
+}
+
+.school h1 {
+	margin-top: -10px;
+	font-size: 1.5em;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.school .mainpic {
+	display: block;
+	float: left;
+}
+
+.school .mainpic img {
+	width: inherit;
+	height: inherit;
+	width: 250px;
+	height: 160px;
+}
+
+.school .sinfo {
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: white;
+	display: block;
+	width: 70%;
+	float: right;
+	line-height: 0.7em;
+}
+
+.school .sinfo h3 {
+	padding-left: 5px;
+	margin: 0;
+	font-weight: 1;
+	background: linear-gradient(315deg, hsla(225, 0%, 89.01%, 1) 15%, hsla(225, 0%, 89.01%, 0) 80%), linear-gradient(245deg, hsla(340, 0%, 77.72%, 1) 100%, hsla(340, 0%, 77.72%, 0) 70%);
+	border-top-right-radius: 9px;
+	border-top-left-radius: 9px;
+	padding: 5px;
+}
+
+.school .sinfo span {
+	float: right;
+	padding-right: 15px;
+}
+
+.school .sinfo b {
+	padding-left: 15px;
+}
+
+.school .schoolhreflist {
+	background-color: white;
+	margin-top: 20px;
+	display: block;
+	float: left;
+	border: 1px solid grey;
+	border-radius: 10px;
+	width: 25%;
+}
+
+.school .schoolhreflist ul {
+	padding: 0;
+	list-style-type: none;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.school .schoolhreflist ul li {
+	padding-left: 5px;
+	text-align-last: center;
+	min-height: 30px;
+	cursor: pointer;
+}
+
+.school .schoolhreflist ul li {
+	border-bottom: 1px solid grey;
+}
+
+.school .schoolcontent {
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: white;
+	width: 70%;
+	margin-top: 30px;
+	float: right;
+}
+
+.school .schoolcontent i {
+	font-size: 0.9em;
+	color: grey;
+	padding-left: 20px;
+}
+
+.school .schoolcontent h3 {
+	margin: 0;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.schoolcontent hr {
+	margin: 0 20px 0 20px;
+}
+
+.tab {
+	display: none;
+}
+
+.chosen {
+	font-style: italic;
+}
+
+.tab.active {
+	display: block;
+	padding: 10px;
+}
+
+.tab.active h2 {
+	display: block;
+	font-family: "Helvetica";
+}
+
+.maininfochangemodal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.maininfochangemodal .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 3px solid #dddddd;
+	width: 40%;
+}
+
+.maininfochangemodal .modal-content input[type=text] {
+	float: right;
+	margin-right: 15px;
+	text-align: center;
+}
+
+.maininfochangemodal .modal-content textarea {
+	resize: none;
+	float: right;
+}
+
+.maininfochangemodal .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.maininfochangemodal .close:hover, .maininfochangemodal.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.crudbuttons {
+	display: none;
+}
+
+.sbutton:hover .crudbuttons {
+	display: inline;
+}
+
+.crudbuttons {
+	font-size: 0.9em;
+	font-style: normal;
+	cursor: pointer;
+}
+
+.contentchangemodal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contentchangemodal .modal-content {
+	background-color: #fefefe;
+	margin: auto auto;
+	padding: 10px;
+	padding-top: 0;
+	border: 3px solid #dddddd;
+	width: 55%;
+	height: 420px;
+}
+
+.contentchangemodal .modal-content input[type=text] {
+	text-align: center;
+}
+
+.contentchangemodal .modal-content textarea {
+	resize: none;
+}
+
+.contentchangemodal .cclose {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.contentchangemodal .cclose:hover, .contentchangemodal.cclose:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul.footerlist {
+	width: 30%;
+	margin: auto auto;
+}
+
+ul.footerlist li {
+	margin-right: 15px;
+	display: inline;
+}
+
+p.footerleft {
+	margin: 0;
+	width: 49%;
+	color: grey;
+	float: left;
+	font-size: 0.8em;
+	padding-left: 5px;
+}
+
+p.footerright {
+	margin: 0;
+	padding-bottom: 15px;
+	text-align: right;
+	width: 49%;
+	color: grey;
+	float: right;
+	font-size: 0.8em;
+	padding-right: 5px;
+}
+
+p.footerright a, .footerlist a {
+	text-decoration: none;
+	color: #0F2345;
+}
+
+.recovery {
+	border: 1px solid black;
+	width: 400px;
+	height: 200px;
+	margin: auto auto;
+	padding: 10px;
+}
+
+.infotable td {
+	height: 22px;
+}
+
+.picupload_frame {
+	z-index: 9999;
+	position: fixed;
+	margin-left: 50%;
+	top: 100px;
+	text-align: center;
+	display: none;
+	padding: 5px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.picupload_body {
+	text-align: center;
+	overflow: auto;
+	padding: 10px;
+	background-color: #ffffff;
+	color: #666666;
+	border-top: 1px solid #e7e7e7;
+	margin-top: 10px
+}
+
+.picupload_close {
+	color: #CB2025;
+	cursor: pointer;
+	float: right;
+}
+
+#picupload_field {
+	display: none;
+	background-color: #000000;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.picupload_body input {
+	margin-top: 20px;
+}
+
+.uploadimage p {
+	margin: 0;
+}
+
+#uploadimage1 img, #uploadimage2 img, #uploadimage3 img {
+	float: left;
+	height: 250px;
+	width: 250px;
+	border: 1px solid black;
+}
+
+.childtable {
+	border-spacing: 0px 7px;
+}
+
+.tabs {
+	font-size: 0;
+	max-width: 400px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.tabs>input[type="radio"] {
+	display: none;
+}
+
+.tabs>div {
+	display: none;
+	position: relative;
+	border: 1px solid grey;
+	padding: 10px;
+	font-size: 16px;
+}
+
+#tab-btn-1:checked~#message_block, #tab-btn-2:checked~#school_block, #tab-btn-3:checked~#document_block {
+	display: block;
+	margin-left: 146px;
+	width: 800px;
+	bottom: 90px;
+	background-color: white;
+	min-height: 400px;
+	z-index: 0;
+}
+
+.tabs>label {
+	position: relative;
+	width: 130px;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	background-color: #f5f5f5;
+	border: 1px solid grey;
+	border-right: none;
+	padding: 2px 8px;
+	font-size: 16px;
+	line-height: 1.5;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.tabs>input[type="radio"]:checked+label {
+	background-color: #fff;
+	border-bottom: 1px solid grey;
+}
+
+.msg {
+	width: 100%;
+	border: 1px solid grey;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.msg p {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0;
+}
+
+.msg button:first-child {
+	margin-right: 20px;
+}
+
+.form_toggle {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.form_toggle-item {
+	float: left;
+	display: inline-block;
+}
+
+.form_toggle-item input[type=radio] {
+	display: none;
+}
+
+.form_toggle-item label {
+	display: inline-block;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-right: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.form_toggle .item-1 label {
+	border-radius: 6px 0 0 6px;
+}
+
+.form_toggle .item-2 label {
+	border-radius: 0 6px 6px 0;
+	border-right: 1px solid #999;
+}
+
+.form_toggle .item-1 input[type=radio]:checked+label {
+	background: #00b7fd;
+}
+
+.form_toggle .item-2 input[type=radio]:checked+label {
+	background: #00b7fd;
+}
+
+#school_block .checkboxbtn-cover, .knobs, .layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#school_block .checkboxbtn {
+	position: relative;
+	width: 74px;
+	height: 36px;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+#school_block .checkboxbtn.r, #school_block .checkboxbtn.r .layer {
+	border-radius: 100px;
+}
+
+#school_block .checkboxbtn.b2 {
+	border-radius: 2px;
+}
+
+#school_block .checkbox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#school_block .knobs {
+	z-index: 2;
+}
+
+#school_block .layer {
+	width: 100%;
+	background-color: #ebf7fc;
+	transition: 0.3s ease all;
+	z-index: 1;
+}
+
+#school_block #checkboxbtn-1 .knobs:before {
+	content: 'Да';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 20px;
+	height: 10px;
+	color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	padding: 9px 4px;
+	background-color: #03A9F4;
+	border-radius: 50%;
+	transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#school_block #checkboxbtn-1 .checkbox:checked+.knobs:before {
+	content: 'Нет';
+	left: 42px;
+	background-color: #f44336;
+}
+
+#school_block p {
+	margin: 0;
+}
+
+.span1 {
+	display: block;
+	float: left;
+	padding: 2px;
+}
+
+.span2 {
+	display: block;
+	float: left;
+	width: 640px;
+}
+
+.span3 {
+	display: block;
+	float: right;
+	width: 80px;
+}
+
+#new_school_modal p, #new_school_modal textarea {
+	margin: 0;
+	resize: none;
+	padding: 5px;
+}
+
+#new_school_modal input[type=text] {
+	text-align: center;
+}
+
+#new_school_modal input[type=submit] {
+	margin-top: 10px;
+}
+
+.consideration p {
+	margin: 0;
+	padding: 5px;
+	border: 1px solid black;
+	width: 650px;
+	margin-bottom: 10px;
+}
+
+.consideration span button {
+	padding: 0;
+	font-size: 1.2em;
+}
+
+.notes_list p {
+	margin: 0;
+	margin-left: 30px;
+}
+
+.children_table {
+	width: 100%;
+}
+
+.children_table td {
+	color: black;
+	line-height: 1.5em;
+}
